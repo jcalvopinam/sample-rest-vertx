@@ -1,0 +1,14 @@
+{
+  "http.port": 8080,
+  "jdbc.url": "jdbc:hsqldb:file:db/release",
+  "jdbc.driver.class": "org.hsqldb.jdbcDriver",
+  "jdbc.max.pool.size": 30,
+  "sql.create.release.table": "create table if not exists Release (id integer identity primary key, applicationName varchar(255), version varchar(5), content clob, releaseDate varchar(10))",
+  "sql.application.name.releases": "select applicationName from Release",
+  "sql.id.app.name.release": "select id, applicationName from Release where name = ?",
+  "sql.get.release.by.id": "select * from Release where id = ?",
+  "sql.insert.release": "insert into Release values (NULL, ?, ?, ?, ?)",
+  "sql.update.release": "update Release set content = ? where id = ?",
+  "sql.delete.release": "delete from Release where id = ?",
+  "sql.all.release.data": "select * from Release"
+}

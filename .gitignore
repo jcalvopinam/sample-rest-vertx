@@ -1,6 +1,9 @@
 .attach_pid*
 /target/
 !.mvn/wrapper/maven-wrapper.jar
+/db
+/src/main/generated
+.vertx
 
 ### STS ###
 .apt_generated
@@ -24,3 +27,7 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+
+### macOS ###
+.DS_Store
